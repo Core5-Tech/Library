@@ -1,10 +1,7 @@
-# مكتبة المربد - Library Management System
+# Library Management System
 
-A modern, web-based library management system for مكتبة المربد built with React, TypeScript, Firebase, and Tailwind CSS. Features barcode scanning, user management, book borrowing, and real-time data synchronization.
+A modern, web-based library management system built with React, TypeScript, Firebase, and Tailwind CSS. Features barcode scanning, user management, book borrowing, and real-time data synchronization.
 
-## 📱 Social Media
-- **Instagram**: [@MS__5K](https://instagram.com/MS__5K)
-- **Telegram**: [@ms93f](https://t.me/ms93f)
 
 ## 🚀 Features
 
@@ -108,56 +105,6 @@ In Firebase Console:
 - Go to Authentication > Sign-in method
 - Enable "Email/Password"
 
-## 🚀 Development
-
-### Local Development
-```bash
-npm run dev
-```
-Access the app at `http://localhost:5173`
-
-### Build for Production
-```bash
-npm run build
-```
-
-### Firebase Deployment
-```bash
-# Deploy to Firebase Hosting
-npm run firebase:deploy
-
-# Test locally before deploy
-npm run firebase:serve
-```
-
-## 🔧 Usage Guide
-
-### Initial Setup
-1. **Create Admin Account**: 
-   - Open the app and go to login page
-   - Click "Show Seed Data Options"
-   - Click "Create Seed Data" to create admin account and sample data
-   - Login with: `admin@library.com` / `Admin123`
-
-2. **Add Sample Data**:
-   - Go to Settings > Sample Data
-   - Click "Create Sample Data" to add books, categories, and members
-
-### Barcode Scanner Setup
-1. **Physical Scanner**:
-   - Connect Panzer USB barcode scanner
-   - Scanner will act as keyboard input
-   - Focus on barcode input field and scan
-
-2. **Test Mode**:
-   - Use "Test Mode" section in barcode input
-   - Try pre-configured sample barcodes:
-     - `9780140449136` - The Odyssey
-     - `9780061120084` - To Kill a Mockingbird
-     - `9780451524935` - 1984
-     - `9780743273565` - The Great Gatsby
-     - `9780547928227` - The Hobbit
-
 ### Daily Operations
 1. **Adding Books**: Books > Add Book (with barcode support)
 2. **Managing Members**: Members > Add Member
@@ -165,75 +112,8 @@ npm run firebase:serve
 4. **Returns**: Borrowing > Return Book
 5. **Reports**: Dashboard shows key metrics and alerts
 
-## 🧪 Testing
 
-### Barcode Testing
-- Use the "Barcode Test" page for comprehensive testing
-- Test with and without physical scanner
-- Try all sample barcodes
-- Verify auto-population of book fields
 
-### Database Testing
-- Create/edit/delete books, members, and loans
-- Verify data persistence after page refresh
-- Test real-time updates in multiple browser tabs
-
-## 📚 API Documentation
-
-### Main Data Models
-
-#### Book
-```typescript
-interface Book {
-  id: string;
-  title: string;
-  author: string;
-  isbn: string;
-  category: string;
-  publisher: string;
-  publicationYear: number;
-  totalCopies: number;
-  availableCopies: number;
-  barcode?: string;
-  description?: string;
-  location?: string;
-  createdAt: string;
-  updatedAt: string;
-}
-```
-
-#### User (Library Member)
-```typescript
-interface User {
-  id: string;
-  name: string;
-  email: string;
-  phone?: string;
-  membershipType: 'student' | 'teacher' | 'public';
-  membershipDate: string;
-  status: 'active' | 'suspended' | 'expired';
-  maxBooksAllowed: number;
-  createdAt: string;
-  updatedAt: string;
-}
-```
-
-#### Borrow Record
-```typescript
-interface BorrowRecord {
-  id: string;
-  bookId: string;
-  bookTitle: string;
-  userId: string;
-  userName: string;
-  borrowDate: string;
-  dueDate: string;
-  returnDate?: string;
-  status: 'borrowed' | 'returned' | 'overdue';
-  fineAmount?: number;
-  notes?: string;
-}
-```
 
 ## 🔒 Security
 
@@ -269,15 +149,8 @@ interface BorrowRecord {
 ## 📞 Support
 
 For technical support or questions:
-- Check the troubleshooting section above
-- Review Firebase console for errors
-- Check browser developer tools console
+corefive.technolog@gamil.com
 
-## 🎯 Demo Credentials
-
-- **Admin Account**: admin@library.com / Admin123
-- **Sample Books**: Available after running seed data
-- **Test Barcodes**: See usage guide above
 
 ---
 
